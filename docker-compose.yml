@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  api:
+    image: lima/api
+    environment:
+      - REDIS=redis://redis/
+      - BROKER=nats://nats:4222
+      - SECRET=Konan
+    ports:
+      - 80:80
+      - 5000:5000
+      - 5001:5001
